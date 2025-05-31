@@ -13,7 +13,7 @@ public class IntersectionController : MonoBehaviour
 
     void Start()
     {
-        boardManager = FindObjectOfType<BoardManager>();
+        boardManager = FindFirstObjectByType<BoardManager>();
     }
 
     void OnMouseDown()
@@ -32,7 +32,7 @@ public class IntersectionController : MonoBehaviour
 
     void PlaceStone()
     {
-        GameManager gameManager = FindObjectOfType<GameManager>();
+        GameManager gameManager = FindFirstObjectByType<GameManager>();
         if (gameManager.CanPlaceStone(x, z))
         {
             GameObject stonePrefab = gameManager.IsBlackTurn() ? blackStonePrefab : whiteStonePrefab;

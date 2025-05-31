@@ -43,7 +43,7 @@ public class BoardRenderer : MonoBehaviour
         
         LineRenderer lr = line.AddComponent<LineRenderer>();
         lr.material = lineMaterial;
-        lr.width = lineWidth;
+        // lr.width = lineWidth;
         lr.positionCount = 2;
         lr.SetPosition(0, start);
         lr.SetPosition(1, end);
